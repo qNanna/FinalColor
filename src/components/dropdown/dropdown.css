@@ -1,0 +1,39 @@
+.dropdown button {
+  padding: 0 12px 0 16px;
+  background-color: #FFFFFF0D;
+  border: 0 solid #FFFFFF40;
+  border-left: 1px solid #FFFFFF40;
+  border-radius: 0 12px 12px 0;
+  outline: none;
+  align-self: stretch;
+  height: 100%;
+  width: 116px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown ul {
+  position: absolute;
+  border-radius: 12px;
+  background-color: #FFFFFF26;
+  box-shadow: 0px 8px 8px 0px #00000040;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-item {
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #FFFFFF0D;
+}

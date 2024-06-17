@@ -1,0 +1,40 @@
+.color-layer {
+  display: flex;
+  background-color: #FFFFFF1A;
+  padding: 8px;
+  border-radius: 12px;
+  margin: 4px 0;
+  align-items: center;
+}
+
+.color-layer span {
+  flex: 1;
+  margin-left: 8px;
+}
+
+.color-layer:hover {
+  background-color: #FFFFFF40;
+}
+
+.color-layer-preview {
+  background-color: #ffffff;
+  border-radius: 5px;
+  height: 36px;
+  width: 36px;
+}
+
+.color-picker-container {
+  position: absolute;
+  z-index: 2;
+}
+
+.layer-remove-button {
+  padding: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+}
+
+.layer-remove-button:hover {
+  background-color: #FFFFFF40;
+}
