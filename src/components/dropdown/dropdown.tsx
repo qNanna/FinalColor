@@ -21,7 +21,7 @@ export const DropdownComponent: React.FC<DropDownProps> = ({ onConvertType }) =>
       <Dropdown.Item className='dropdown-item' eventKey="0-255">0-255</Dropdown.Item>
       <Dropdown.Item className='dropdown-item' eventKey="0-1">0-1</Dropdown.Item>
       <Dropdown.Item className='dropdown-item' eventKey="HEX">HEX</Dropdown.Item>
-      <Dropdown.Item className='dropdown-item' eventKey="HEXA">HEX +a%</Dropdown.Item>
+      <Dropdown.Item className='dropdown-item' eventKey="HEXA">HEX +α%</Dropdown.Item>
     </Dropdown>
   );
 };

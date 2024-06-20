@@ -4,6 +4,7 @@ import { ReactElement, useEffect, useState } from 'react';
 import { ConvertType, DropdownComponent } from './components/dropdown/dropdown';
 import { ColorLayerComponent } from './components/color-layer/color-layer';
 import { rgbaConvert, rgbaToHexConvert, RGBA } from './shared/color-format';
+import checkboard from './assets/checkboard.png';
 
 function App() {
   const [layerList, setLayerList] = useState<ReactElement[]>([]);
@@ -79,20 +80,34 @@ function App() {
     <div className='main-container'>
       <div className='center'>
         <div className='center-box'>
-          <div className='color-box' style={{ backgroundColor: rgbaString }}></div>
+        <div
+          className='color-box'
+          style={{
+            backgroundImage: `linear-gradient(45deg, ${rgbaString}, ${rgbaString}), url(${checkboard})`,
+            backgroundPosition: 'left center'
+          }}></div>
           <span className='label'>Final color</span>
           <div className='output-box'>
-            <span className='output-text'>{outputColor}</span>
+            <div className='copybox'>
+              <img src='src/assets/copy-icon.svg' />
+            </div>
+            <span className='output-text uppercase'>{outputColor}</span>
             <DropdownComponent onConvertType={handleConvertType}/>
           </div>
         </div>
       </div>
       <div className='sidebar'>
+        <div className='titlebar'>
+          <img src='src/assets/title-image.svg' />
+        </div>
         <div className='sidebar-container'>
           <div className='layer-container'>
             {layerList}
           </div>
-          <div className='sidebar-add-layer-button' onClick={addLayer}>+ Add color</div>
+          <div className='sidebar-add-layer-button' onClick={addLayer}>
+            <img src='src/assets/plus-icon.svg' />
+            Add color
+          </div>
         </div>
       </div>
     </div>

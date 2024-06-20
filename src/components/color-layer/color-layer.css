@@ -5,6 +5,8 @@
   border-radius: 12px;
   margin: 4px 0;
   align-items: center;
+  transition: background-color .2s, transform .2s ease-out;
+  cursor: pointer;
 }
 
 .color-layer span {
@@ -13,14 +15,23 @@
 }
 
 .color-layer:hover {
-  background-color: #FFFFFF40;
+  background-color: #FFFFFF26;
+  transform: scale(1.025);
+}
+
+.color-layer:active {
+  background-color: #FFFFFF1A;
+  transform: scale(.95);
 }
 
 .color-layer-preview {
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 5px;
   height: 36px;
   width: 36px;
+}
+.color-layer-preview div {
+  flex: 1;
 }
 
 .color-picker-container {
@@ -33,8 +44,20 @@
   cursor: pointer;
   border-radius: 4px;
   display: flex;
+  transition: background-color .15s;
 }
 
 .layer-remove-button:hover {
-  background-color: #FFFFFF40;
+  background-color: #FFFFFF26;
+}
+
+.layer-wrapper {
+  position: relative;
+}
+
+.floating-picker {
+  position:absolute;
+  bottom:auto;
+  left: 0;
+  transform: translate(calc(-100% - 12px), -100%);
 }
