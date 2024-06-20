@@ -1,9 +1,14 @@
 export type RGBA = { r: number; g: number; b: number; a?: number };
 
 export const rgbaConvert = (rgba: RGBA, short: boolean) => {
-  if (!short) return `rgba(${Object.values(rgba).map(el => el.toFixed(2))})`;
+  if (!short) {
+    const [r, g, b, a] = Object.values(rgba);
+    const longRGB = [[r, g, b].map(el => Math.round(parseFloat(el.toFixed(2)))), a.toFixed(2)]
+    return `rgba(${longRGB})`;
+  }
 
-  const shortRGBA = Object.values(rgba).map(el => (el / 255).toFixed(2));
+  const [r, g, b, a] = Object.values(rgba);
+  const shortRGBA = [[r, g, b].map(el => (el / 255).toFixed(2)), a.toFixed(2)]
 
   return `rgba(${shortRGBA})`;
 }
